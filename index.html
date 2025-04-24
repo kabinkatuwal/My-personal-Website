@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!--Reference
+    For reference I have view various website , for html and css cheatsheet I have visited the website like :
+    1.https://htmlcheatsheet.com/
+    2.https://www.w3schools.com/html/
+    3.https://developer.mozilla.org/en-US/docs/Web/HTML
+    4. Watch youtube video: Akiriti Goswami https://www.youtube.com/watch?v=BT4WzyT2g8k 
+    5. Use generative AI for help-->
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            flex-direction: column;
+            color:#333;
+            line-height: 1.7;
+        }
+        main{
+            padding: 2rem;
+            text-align:center;
+            flex-grow: 1;
+        }
+        main.overview{
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px 0.1;
+        }
+        main.overview h1{
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            color: #4CAF50;
+            margin-bottom: 1rem;
+        }
+        main .overview p{
+            font-size:1.1rem;
+            margin-bottom: 1.5rem;
+        }
+        .overview .info-box {
+            background-color: #ffffff;
+            border-left: 5px solid #4CAF50;
+            border-radius: 8px;
+            padding: 1.2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left;
+        }
+        .overview .info-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+             text-align: center;
+             padding: 1rem;
+            background-color: #2c3e50;
+            color: white;
+            position:fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="htmlcheatsheet.html">HTML Cheat Sheet</a></li>
+            <li><a href="CSS-cheatsheet.html">CSS Cheat Sheet</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+        </ul>
+    </nav>
+    <main>
+        <header>
+            <h1>Welcome to My Personal Website.</h1>
+        </header>
+        <section class="overview">
+            <div class="info-box">
+            <p>This website is designed to be helful resource on your web development journey.This website contains clear and detail cheat-sheet for HTML and CSS, providing you majorly used element and properties you need while working with your project.I beleive this will save your lots of time and effort</p>
+            <p>If your are interested you can even explore my hobbies. I have create separated hobbies page mad explained what I like to do most when I am free.I do have also share recepie for my favourite nepali dish. Please, do visit and try to cook it by following the recepie.You sure love it.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Kabin Katuwal. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

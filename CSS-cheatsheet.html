@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Cheat Sheet</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --accent-color: #e74c3c;
+            --dark-color: #2c3e50;
+            --light-color: #ecf0f1;
+        }
+
+        .cheat-sheet {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .cheat-item {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .cheat-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .cheat-item h3 {
+            color: var(--dark-color);
+            margin-bottom: 10px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--light-color);
+        }
+        nav {
+            padding: 20px 0;
+            top: 0;
+            z-index: 100;
+            background-color: transparent;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            gap: 30px;
+        }
+
+        nav ul li {
+            margin: 0;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            font-size: 1.1em;
+            cursor: pointer;
+            /* Always show pointer cursor */
+        }
+
+        /* Hover Effects */
+        nav ul li a:hover {
+            color: #3498db;
+            cursor: pointer;
+            /* Explicit pointer on hover */
+        }
+
+        /* Active Tab Styling */
+        nav ul li a.active {
+            color: #3498db;
+            font-weight: 600;
+            cursor: default;
+            /* Regular cursor for active tab */
+        }
+
+        /* Underline animation */
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #3498db;
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover::after,
+        nav ul li a.active::after {
+            width: 100%;
+        }
+
+        /* Special hover effect for non-active tabs */
+        nav ul li a:not(.active):hover {
+            cursor: pointer;
+            transform: translateY(-2px);
+            /* Slight lift effect */
+        }
+
+        .example {
+            background: #f8f9fa;
+            padding: 12px;
+            border-radius: 5px;
+            margin-top: 10px;
+            border-left: 3px solid var(--primary-color);
+            overflow-x: auto;
+            font-size: 0.9em;
+        }
+
+        .visual-example {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px dashed #ddd;
+            background-color: white;
+        }
+
+        .property {
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+
+        .category-header {
+            grid-column: 1 / -1;
+            text-align: center;
+            margin: 30px 0 10px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary-color);
+            color: var(--dark-color);
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="htmlcheatsheet.html">HTML Cheat Sheet</a></li>
+            <li><a href="CSS-cheatsheet.html">CSS Cheat Sheet</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1><center>CSS cheat Sheet</center></h1>
+    </header>
+    <main class="cheat-sheet">
+        <h2 class="category-header">Layout Properties</h2>
+
+        <div class="cheat-item">
+            <h3>Display</h3>
+            <div class="example">
+                <span class="property">display:</span>block | inline | inline-block | flex | grid | none;
+
+                <div class="visual-example">
+                    <div style="display:inline-block; padding: 5px; background: 3498db;color:white;">inline-block</div>
+                    <div style="display:block; padding: 5px; background:#2ecc71; color: white; margin-top: 5px;">block
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="cheat-item">
+            <h3>Position</h3>
+            <div class="example">
+                <span class="property">Position</span>static | relative | absolute | fixed | sticky;<br>
+                <span class="property">top/bottom/left/right:</span> px | % | em | rem;<br>
+                <span class="property">z-index</span>number;
+                <div class="visula-example" style="position:relative; height:60px;">
+                    <div style="positioin:absolute; top:10px; left:20px; width:40px; height:40px; background: #e74c3c;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cheat-item">
+            <h3>Flexbox</h3>
+            <div class="example">
+                <span class="property">display: flex;</span><br>
+                <span class="property">flex-direction:</span> row | column | row-reverse | column-reverse;<br>
+                <span class="property">justify-content:</span> flex-start | flex-end | center | space-between |
+                space-around;<br>
+                <span class="property">align-items:</span> stretch | flex-start | flex-end | center | baseline;<br>
+                <span class="property">flex-wrap:</span> nowrap | wrap | wrap-reverse;<br>
+                <span class="property">gap:</span> px | % | em | rem;
+                <div class="visual-example" style="display: flex; justify-content: space-around; gap: 10px;">
+                    <div style="width: 30px; height: 30px; background: #3498db;"></div>
+                    <div style="width: 30px; height: 30px; background: #2ecc71;"></div>
+                </div>
+            </div>
+        </div>
+        <h2 class="category-header">Box Model</h2>
+
+        <div class="cheat-item">
+            <h3>Dimensions</h3>
+            <div class="example">
+                <span class="property">width:</span> px | % | vw | em | rem | auto;<br>
+                <span class="property">height:</span> px | % | vh | em | rem | auto;<br>
+                <span class="property">min-width/max-width:</span> px | % | vw | em | rem;<br>
+                <span class="property">min-height/max-height:</span> px | % | vh | em | rem;
+                <div class="visual-example" style="width: 100%; max-width: 200px; height: 50px; background: #9b59b6;">
+                </div>
+            </div>
+        </div>
+        <div class="cheat-item">
+            <h3>Margin & Padding</h3>
+            <div class="example">
+                <span class="property">margin:</span> px | % | em | rem | auto;<br>
+                <span class="property">padding:</span> px | % | em | rem;<br>
+                <span class="property">box-sizing:</span> content-box | border-box;
+                <div class="visual-example"
+                    style="margin: 10px 0; padding: 15px; background: #3498db; color: white; box-sizing: border-box;">
+                    Box with padding
+                </div>
+            </div>
+        </div>
+        <div class="cheat-item">
+            <h3>Border & Outline</h3>
+            <div class="example">
+                <span class="property">border:</span> width style color;<br>
+                <span class="property">border-radius:</span> px | %;<br>
+                <span class="property">outline:</span> width style color;<br>
+                <span class="property">box-shadow:</span> h-offset v-offset blur spread color;
+                <div class="visual-example"
+                    style="border: 2px dashed #e74c3c; border-radius: 8px; outline: 1px solid #3498db; box-shadow: 2px 2px 5px rgba(0,0,0,0.2); padding: 10px;">
+                    Styled box
+                </div>
+            </div>
+        </div>
+        <h2 class="category-header">Typography</h2>
+
+        <div class="cheat-item">
+            <h3>Text Styling</h3>
+            <div class="example">
+                <span class="property">font-family:</span> name, fallback;<br>
+                <span class="property">font-size:</span> px | % | em | rem | vw;<br>
+                <span class="property">font-weight:</span> normal | bold | 100-900;<br>
+                <span class="property">font-style:</span> normal | italic | oblique;<br>
+                <span class="property">text-decoration:</span> none | underline | overline | line-through;
+                <div class="visual-example"
+                    style="font-family: Arial; font-size: 1.1em; font-weight: bold; font-style: italic; text-decoration: underline;">
+                    Styled text
+                </div>
+            </div>
+        </div>
+        <div class="cheat-item">
+            <h3>Text Layout</h3>
+            <div class="example">
+                <span class="property">text-align:</span> left | right | center | justify;<br>
+                <span class="property">line-height:</span> number | px | em | rem;<br>
+                <span class="property">letter-spacing:</span> px | em | rem;<br>
+                <span class="property">word-spacing:</span> px | em | rem;<br>
+                <span class="property">text-transform:</span> none | capitalize | uppercase | lowercase;
+                <div class="visual-example"
+                    style="text-align: center; line-height: 1.6; letter-spacing: 1px; text-transform: uppercase;">
+                    Centered uppercase text
+                </div>
+            </div>
+        </div>
+        <h2 class="category-header">Colors & Backgrounds</h2>
+
+        <div class="cheat-item">
+            <h3>Colors</h3>
+            <div class="example">
+                <span class="property">color:</span> name | hex | rgb() | rgba() | hsl() | hsla();<br>
+                <span class="property">opacity:</span> 0-1;<br>
+                <span class="property">background-color:</span> name | hex | rgb() | rgba() | hsl() | hsla();
+                <div class="visual-example"
+                    style="color: white; background-color: rgba(231, 76, 60, 0.8); padding: 10px;">
+                    Semi-transparent background
+                </div>
+            </div>
+        </div>
+        <div class="cheat-item">
+            <h3>Backgrounds</h3>
+            <div class="example">
+                <span class="property">background-image:</span> url() | linear-gradient() | radial-gradient();<br>
+                <span class="property">background-size:</span> cover | contain | px | %;<br>
+                <span class="property">background-position:</span> top | bottom | left | right | center | px | %;<br>
+                <span class="property">background-repeat:</span> repeat | no-repeat | repeat-x | repeat-y;
+                <div class="visual-example"
+                    style="background-image: linear-gradient(to right, #3498db, #2ecc71); height: 50px;"></div>
+            </div>
+        </div>
+        <h2 class="category-header">Transforms & Animations</h2>
+
+        <div class="cheat-item">
+            <h3>Transforms</h3>
+            <div class="example">
+                <span class="property">transform:</span> translate() | rotate() | scale() | skew();<br>
+                <span class="property">transform-origin:</span> px | % | left | center | right | top | bottom;<br>
+                <span class="property">perspective:</span> px | none;
+                <div class="visual-example"
+                    style="transform: rotate(5deg); padding: 10px; background: #3498db; color: white;">
+                    Rotated element
+                </div>
+            </div>
+        </div>
+        <div class="cheat-item">
+            <h3>Transitions</h3>
+            <div class="example">
+                <span class="property">transition:</span> property duration timing-function delay;<br>
+                <span class="property">transition-property:</span> all | property-name;<br>
+                <span class="property">transition-duration:</span> s | ms;<br>
+                <span class="property">transition-timing-function:</span> ease | linear | ease-in | ease-out |
+                cubic-bezier();
+                <div class="visual-example"
+                    style="transition: all 0.3s ease; padding: 10px; background: #2ecc71; color: white;"
+                    onmouseover="this.style.background='#e74c3c'" onmouseout="this.style.background='#2ecc71'">
+                    Hover me!
+                </div>
+            </div>
+        </div>
+        <div class="cheat-item">
+            <h3>Animations</h3>
+            <div class="example">
+                <span class="property">animation:</span> name duration timing-function delay iteration-count direction
+                fill-mode;<br>
+                <span class="property">@keyframes:</span> define animation steps;
+                <div class="visual-example"
+                    style="animation: pulse 2s infinite; padding: 10px; background: #9b59b6; color: white;">
+                    Pulsing element
+                </div>
+            </div>
+        </div>
+        <h2 class="category-header">Advanced Layout</h2>
+
+        <div class="cheat-item">
+            <h3>Grid</h3>
+            <div class="example">
+                <span class="property">display: grid;</span><br>
+                <span class="property">grid-template-columns/rows:</span> px | % | fr | repeat();<br>
+                <span class="property">grid-gap:</span> px | % | em | rem;<br>
+                <span class="property">grid-area:</span> name | row-start/column-start/row-end/column-end;
+                <div class="visual-example" style="display: grid; grid-template-columns: 1fr 1fr; gap: 5px;">
+                    <div style="background: #3498db; padding: 5px;"></div>
+                    <div style="background: #2ecc71; padding: 5px;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="cheat-item">
+            <h3>Flexbox</h3>
+            <div class="example">
+                <span class="property">flex:</span> grow shrink basis;<br>
+                <span class="property">flex-grow:</span> number;<br>
+                <span class="property">flex-shrink:</span> number;<br>
+                <span class="property">flex-basis:</span> px | % | em | rem | auto;<br>
+                <span class="property">align-self:</span> auto | flex-start | flex-end | center | baseline | stretch;
+                <div class="visual-example" style="display: flex;">
+                    <div style="flex: 1; background: #3498db; margin: 2px;"></div>
+                    <div style="flex: 2; background: #2ecc71; margin: 2px;"></div>
+                </div>
+            </div>
+        </div>
+        <h2 class="category-header">Responsive Design</h2>
+
+        <div class="cheat-item">
+            <h3>Media Queries</h3>
+            <div class="example">
+                <span class="property">@media</span> media-type and (media-feature) { ... }<br>
+                Common breakpoints:<br>
+                <span class="property">@media (max-width: 576px)</span> /* Small devices */<br>
+                <span class="property">@media (min-width: 768px)</span> /* Medium devices */<br>
+                <span class="property">@media (min-width: 992px)</span> /* Large devices */<br>
+                <span class="property">@media (min-width: 1200px)</span> /* Extra large devices */
+            </div>
+        </div>
+        <div class="cheat-item">
+            <h3>Viewport Units</h3>
+            <div class="example">
+                <span class="property">vw:</span> 1% of viewport width<br>
+                <span class="property">vh:</span> 1% of viewport height<br>
+                <span class="property">vmin:</span> 1% of viewport's smaller dimension<br>
+                <span class="property">vmax:</span> 1% of viewport's larger dimension<br>
+                Example: <span class="property">font-size: 4vw;</span>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Kabin Katuwal<span id="current-year"></span> My Personal Website. All right reserved.</p>
+    </footer>
+</body>
+
+</html>

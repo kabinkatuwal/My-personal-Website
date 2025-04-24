@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hobbies-container{
+            wax-width:1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        .hobby-section {
+            margin-bottom: 2rem;
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .media-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .media-card {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .media-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .media-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .media-info {
+            padding: 1rem;
+            background: white;
+        }
+        
+        .media-info h4 {
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+        
+        .media-info p {
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        
+        .book-list ,.food-gallery{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .book-card, .food-card{
+            width: 150px;
+        }
+        
+        .book-card img,.food-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .book-card h4,.food-card h4 {
+            margin-top: 8px;
+            font-size: 0.9em;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #f8f9fa;
+        }
+        .recipe{
+            background:#f9f9f9;
+            padding:1.5rem;
+            border-radius: 8px;
+            margin-top:1.5rem;
+            border-left:3px solid #e74c3c;
+        }
+        .recipe h4{
+            color:#e74c3c;
+            margin-bottom: 1rem;
+        }
+        h3{
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="html-cheatsheet.html">HTML Cheat Sheet</a></li>
+            <li><a href="css-cheatsheet.html">CSS Cheat Sheet</a></li>
+            <li><a class="active" href="hobbies.html">My Hobbies</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>My Hobbies</h1>
+        <p>Things I enjoy doing in my free time.
+            I love watching movies and anime series, reading books and cooking. Doing this activities makes me feel relax and refresh.When I am bored I enjoy watching movies or cooking new recepie.I usually, read book when I want to spend my time productively.All these hobbies help me to express myself, expand my knowledge,enrich my free time productivly.
+        </p>
+    </header>
+    <main class="hobbies-container">
+        <section class="hobby-section">
+            <h2>Movies & Anime</h2>
+            <p>
+             I love to watching movies and anime series in my free time. Here are some of my favorites:</p>
+            <div class="media-gallery">
+                <div class="media-card">
+                    <img src="image/Titanic.jpg" alt="Titanic">
+                    <div class="media-info">
+                        <h4>Titanic</h4>
+                        <p>1997 ‧ Romance/Drama</p>
+                    </div>
+                </div>
+                <div class="media-card">
+                    <img src="image/Endgame.jpeg" alt="The Endgame">
+                    <div class="media-info">
+                        <h4>The Endgame</h4>
+                        <p>2019 ‧ Action/Sci-fi</p>
+                    </div>
+                </div>
+                <div class="media-card">
+                    <img src="image/the-shawshank-redemption.jpg" alt="The shawshank redemption">
+                    <div class="media-info">
+                        <h4>The shawnshank redemption</h4>
+                        <p>1994 ‧ Drama/Crime</p>
+                    </div>
+                </div>
+                <div class="media-card">
+                    <img src="image/Your Name.jpg" alt="Your Name">
+                    <div class="media-info">
+                        <h4>Your Name</h4>
+                        <p>2017 ‧ Anime/Romance</p>
+                    </div>
+                </div>
+                <div class="media-card">
+                    <img src="image/Naruto.jpg" alt="Naruto">
+                    <div class="media-info">
+                        <h4>Naruto</h4>
+                        <p>2007 ‧ Anime/Fantasy</p>
+                    </div>
+                </div>
+                <div class="media-card">
+                    <img src="image/Grave of fire flies.jpeg" alt="Grave of fire flies">
+                    <div class="media-info">
+                        <h4>Grave of fire flies</h4>
+                        <p>1988 ‧ Anime/Emotional</p>
+                    </div>
+                </div>
+            </div>
+            <h3 style="margin-top: 30px;">My Watchlist</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Type</th>
+                        <th>Genre</th>
+                        <th>Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Inception</td>
+                        <td>Movie</td>
+                        <td>Sci-Fi/Thriller</td>
+                        <td>★★★★☆</td>
+                    </tr>
+                    <tr>
+                        <td>Demon Slayer</td>
+                        <td>Anime</td>
+                        <td>Action/Fantasy</td>
+                        <td>★★★★★</td>
+                    </tr>
+                    <tr>
+                        <td>The Dark Knight</td>
+                        <td>Movie</td>
+                        <td>Action/Crime</td>
+                        <td>★★★★★</td>
+                    </tr>
+                    <tr>
+                        <td>Death Note</td>
+                        <td>Anime</td>
+                        <td>Thriller/Psychological</td>
+                        <td>★★★★★</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section> 
+        <section class="hobby-section">
+            <h2>Reading Books</h2>
+            <p>I enjoy reading both fiction and non-fiction. Here are some books I've recently read. Among these book my favourite book is Rich dad and Poor dad by Robert Kiyosaki.</p>
+            
+            <div class="book-list">
+                <div class="book-card">
+                    <img src="image/Atomic Habits.jpg" alt="Atomic Habits">
+                    <h4>Atomic Habits</h4>
+                </div>
+                
+                <div class="book-card">
+                    <img src="image/The Alchemist.jpg" alt="The Alchemist">
+                    <h4>The Alchemist</h4>
+                </div>
+                
+                <div class="book-card">
+                    <img src="image/Harrypotter.jpg" alt="Harry Potter">
+                    <h4>Harry Potter</h4>
+                </div>
+                
+                <div class="book-card">
+                    <img src="image/The power of subconcious mind.jpg" alt="The power of subconcious mind">
+                    <h4>The power of subconcious mind.</h4>
+                </div>
+                
+                <div class="book-card">
+                    <img src="image/The psychology of money.jpg" alt="The pychology of money">
+                    <h4>The Psychology of Money.</h4>
+                </div>
+
+                <div class="book-card">
+                    <img src="image/To Kill a Mokingbird.jpg" alt="To Kill a Mokingbird">
+                    <h4>To kill a Mokingbird.</h4>
+                </div>
+                <div class="book-card">
+                    <img src="image/The lord of the rings.jpg" alt="Lord of rings">
+                    <h4>The Lord of Rings.</h4>
+                </div>
+
+                <div class="book-card">
+                    <img src="image/Rich dad poor dad.jpg" alt="Rich dad Poor dad">
+                    <h4>Rich dad Poor dad.</h4>
+                </div>
+            </div>
+            <h3 style="margin-top: 30px;">My Reading List</h3>
+            <ul style="margin-top: 15px; padding-left: 20px; columns: 2;">
+                <li style="margin-bottom: 8px;">The Art of War</li>
+                <li style="margin-bottom: 8px;">To subtle Art of not giving a fuck</li>
+                <li style="margin-bottom: 8px;">Think and Grow Rich</li>
+                <li style="margin-bottom: 8px;">48 power of Laws</li>
+                <li style="margin-bottom: 8px;">The Silent Patient</li>
+                <li style="margin-bottom: 8px;">Sapiens</li>
+            </ul>
+        </section>
+        <section class="hobby-section">
+            <h2>Cooking Nepali Cuisine</h2>
+            <p>I love cooking traditional Nepali dishes, especially momo (dumplings) these are my favourite.I also have shared recipie for chicken MO:MO. I do have good experience on cooking. I started cooking when I was 12. I used to help my mom in kitchen. I learned cooking from my mom. I enjoy her cooking a lot.</p>
+            
+            <div class="food-gallery">
+                <div class="food-card">
+                    <img src="image/Mo Mo.jpg" alt="Nepali Momo">
+                    <h4>Nepali Momo</h4>
+                </div>
+                
+                <div class="food-card">
+                    <img src="image/Thukpa.jpeg" alt="Thukpa">
+                    <h4>Thukpa</h4>
+                </div>
+                
+                <div class="food-card">
+                    <img src="image/Thakali.jpeg" alt="Dal Bhat">
+                    <h4>Dal Bhat</h4>
+                </div>
+                
+                <div class="food-card">
+                    <img src="image/sel-roti.jpeg" alt="Sel Roti">
+                    <h4>Sel Roti</h4>
+                </div>
+                <div class="food-card">
+                    <img src="image/yomari.jpg" alt="Yomari">
+                    <h4>Yomari</h4>
+                </div>
+                <div class="food-card">
+                    <img src="image/Dhido.jpeg" alt="Dhido">
+                    <h4>Dhido</h4>
+                </div>
+                <div class="food-card">
+                    <img src="image/dahi_chura.avif" alt="dahi_chura">
+                    <h4>Dahi Chura</h4>
+                </div>
+                <div class="food-card">
+                    <img src="image/Kheer.jpeg" alt="Kheer">
+                    <h4>Kheer</h4>
+                </div>
+
+            </div>  
+            <div class="recipe">
+                <h4>Chicken Momo Recipe</h4>
+                <p><strong>Ingredients:</strong></p>
+                <ul>
+                    <li>500g ground chicken</li>
+                    <li>2 cups finely chopped cabbage</li>
+                    <li>1 onion, finely chopped</li>
+                    <li>2 tbsp garlic paste</li>
+                    <li>1 tbsp ginger paste</li>
+                    <li>1 tsp turmeric</li>
+                    <li>1 tsp cumin powder</li>
+                    <li>Momo wrappers</li>
+                </ul>
+                <p><strong>Instructions:</strong></p>
+                <ol>
+                    <li>Mix all ingredients except wrappers</li>
+                    <li>Place spoonful in center of wrapper</li>
+                    <li>Fold and pleat edges to seal</li>
+                    <li>Steam for 10-12 minutes</li>
+                    <li>Serve with tomato achar</li>
+                </ol>
+            </div>
+            
+            <h3>Other Nepali Dishes I Enjoy Making</h3>
+            <ul style="columns: 2; margin-top: 10px;">
+                <li>Newari Khaja Set</li>
+                <li>Gundruk Soup</li>
+                <li>Yomari</li>
+                <li>Chatamari</li>
+                <li>Bara</li>
+                <li>Choila</li>
+            </ul>
+        </section>     
+    </main>
+        <footer>
+            <p>&copy; 2025 Kabin Katuwal<span id="current-year"></span> My Personal Website. All right reserved.</p>
+        </footer>  
+        <script src="js/script.js"></script>
+</body>
+</html>
